@@ -1,0 +1,173 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="landing-container">
+  <!-- Hero Section -->
+  <div class="hero-section text-center py-5">
+    <div class="container">
+      <h1 class="display-3 fw-bold mb-4" style="background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%); -webkit-background-clip: text; background-clip: text; color: transparent;">
+        <i class="fas fa-music me-2"></i> MoodyTunes
+      </h1>
+      <p class="lead mb-5" style="color: #6a4c93; max-width: 700px; margin: 0 auto;">
+        Your AI-powered music companion that reads emotions and curates perfect playlists
+      </p>
+      <div class="cta-buttons d-flex justify-content-center gap-3">
+        <a href="/signup" class="btn btn-primary btn-lg px-4 py-3 rounded-pill">
+          Start Free <i class="fas fa-arrow-right ms-2"></i>
+        </a>
+        <a href="#how-it-works" class="btn btn-outline-primary btn-lg px-4 py-3 rounded-pill">
+          How It Works
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Features Section -->
+  <div class="features-section py-5" style="background: rgba(248, 245, 255, 0.7);">
+    <div class="container">
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon mb-4" style="color: #a18cd1; font-size: 2.5rem;">
+              <i class="fas fa-camera"></i>
+            </div>
+            <h3 style="color: #6a4c93;">Real-Time Emotion Detection</h3>
+            <p>Our AI analyzes your facial expressions through your webcam to detect your current mood with 95% accuracy.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 2 -->
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon mb-4" style="color: #fbc2eb; font-size: 2.5rem;">
+              <i class="fas fa-brain"></i>
+            </div>
+            <h3 style="color: #6a4c93;">Smart Music Matching</h3>
+            <p>Advanced algorithms pair your emotions with the perfect songs, considering your personal music preferences.</p>
+          </div>
+        </div>
+        
+        <!-- Feature 3 -->
+        <div class="col-md-4">
+          <div class="feature-card p-4 h-100">
+            <div class="feature-icon mb-4" style="color: #4facfe; font-size: 2.5rem;">
+              <i class="fas fa-sliders-h"></i>
+            </div>
+            <h3 style="color: #6a4c93;">Personalized Controls</h3>
+            <p>Customize by language, genre, or specific artists to fine-tune your recommendations.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- How It Works Section -->
+  <div id="how-it-works" class="how-it-works py-5">
+    <div class="container">
+      <h2 class="text-center mb-5" style="color: #6a4c93;">How this Works</h2>
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="steps">
+            <div class="step mb-5">
+              <div class="step-number" style="background: #a18cd1;">1</div>
+              <div class="step-content">
+                <h4 style="color: #6a4c93;">Face the Camera</h4>
+                <p>Allow access to your webcam - we'll analyze your facial expressions in real-time.</p>
+              </div>
+            </div>
+            
+            <div class="step mb-5">
+              <div class="step-number" style="background: #fbc2eb;">2</div>
+              <div class="step-content">
+                <h4 style="color: #6a4c93;">Mood Detection</h4>
+                <p>Our AI detects emotions like happy, sad, angry, or surprised within seconds.</p>
+              </div>
+            </div>
+            
+            <div class="step">
+              <div class="step-number" style="background: #4facfe;">3</div>
+              <div class="step-content">
+                <h4 style="color: #6a4c93;">Perfect Playlist</h4>
+                <p>Get customized YouTube recommendations matching your current mood and preferences.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-lg-6">
+          <div class="demo-image p-4 text-center">
+            <img src="{{ url_for('static', filename='demo-screenshot.png') }}" alt="MoodyTunes in action" class="img-fluid rounded-3 shadow" style="border: 5px solid white;">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <!-- Final CTA -->
+  <div class="final-cta py-5 text-center">
+    <div class="container">
+      <h2 class="mb-4" style="color: #6a4c93;">Ready to Experience Mood-Based Music?</h2>
+      <p class="mb-5" style="max-width: 600px; margin: 0 auto; color: #6a4c93;">
+        Join thousands of users discovering the perfect soundtrack for every emotion.
+      </p>
+      <a href="/signup" class="btn btn-primary btn-lg px-5 py-3 rounded-pill">
+        Start Your Musical Journey <i class="fas fa-arrow-right ms-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  /* Landing Page Specific Styles */
+  .landing-container {
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .hero-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, rgba(248, 245, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 100%);
+  }
+  
+  .feature-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(161, 140, 209, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .feature-card:hover {
+    transform: translateY(-10px);
+  }
+  
+  .step {
+    display: flex;
+    align-items: flex-start;
+  }
+  
+  .step-number {
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 20px;
+    font-weight: bold;
+    flex-shrink: 0;
+  }
+  
+  .testimonial-card {
+    background: white;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(161, 140, 209, 0.1);
+  }
+  
+  .final-cta {
+    background: linear-gradient(135deg, rgba(161, 140, 209, 0.1) 0%, rgba(251, 194, 235, 0.1) 100%);
+  }
+</style>
+{% endblock %}

@@ -1,0 +1,12 @@
+<!-- templates/signup.html -->
+{% extends "base.html" %}
+{% block content %}
+<div class="container mt-5">
+    <h2>Login In</h2>
+    <form method="POST">
+        <input name="username" class="form-control mb-3" placeholder="Username" required>
+        <input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+        <button class="btn btn-primary">Login</button>
+    </form>
+</div>
+{% endblock %}
